@@ -12,7 +12,7 @@ FragTrap::FragTrap(std::string const & name)
 FragTrap::FragTrap(FragTrap const & src) {
 	*this = src;
 	std::cout << "FR4G-TP " <<  this->_name <<
-		": Oh, hello there~\n";
+		": Oh, hello there!\n";
 }
 
 FragTrap::~FragTrap() {
@@ -40,4 +40,22 @@ void		FragTrap::rangedAttack(std::string const & target) const {
 	std::cout << "FR4G-TP " << this->_name << " attacks " << target <<
 		" at range, causing " << this->_ranged_attack_damage << 
 		" points of damage!\n";
+}
+
+void		FragTrap::meleeAttack(std::string const & target) const {
+	std::cout << "FR4G-TP " << this->_name << " attacks " << target <<
+		" at close range, causing " << this->_melee_attack_damage << 
+		" points of damage!\n";
+}
+
+void 		FragTrap::display() const {
+	std::cout << "\nFR4G-TP\n" << "Name: " << this->_name << "\n" <<
+		"Hit Points: " << this->_hit_points << "\n" <<
+		"Max Hit Points: " << this->_max_hit_points << "\n" <<
+		"Energy Points: " << this->_energy_points << "\n" <<
+		"Max Energy Points: " << this->_max_energy_points << "\n" <<
+		"Level: " << this->_level << "\n" <<
+		"Melee Attack Damage: " << this->_melee_attack_damage << "\n" <<
+		"Ranged Attack Damage: " << this->_ranged_attack_damage << "\n" <<
+		"Armor Damage Reduction: " << this->_armor_damage_reduction	<< "\n\n";
 }
