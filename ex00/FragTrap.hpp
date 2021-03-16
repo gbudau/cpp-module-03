@@ -16,7 +16,6 @@ class FragTrap {
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
 		void			vaulthunter_dot_exe(std::string const & target);
-		void 			displayStats() const;
 
 	private:
 		std::string		_name;
@@ -28,6 +27,8 @@ class FragTrap {
 		unsigned int	_melee_attack_damage;
 		unsigned int	_ranged_attack_damage;
 		unsigned int	_armor_damage_reduction;
+		void			_print_quote(std::string const & quote) const;
+		void			_print_info() const;
 };
 
 #endif  // FRAGTRAP_HPP_
