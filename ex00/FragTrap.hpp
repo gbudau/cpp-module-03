@@ -1,6 +1,9 @@
 #ifndef FRAGTRAP_HPP_
 #define FRAGTRAP_HPP_
+#include <ctime>
+#include <cstdlib>
 #include <iostream>
+#include <string>
 
 class FragTrap {
 	public:
@@ -12,7 +15,7 @@ class FragTrap {
 		void			meleeAttack(std::string const & target) const;
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
-		void			vaulthunter_dot_exe(std::string const & target) const;
+		void			vaulthunter_dot_exe(std::string const & target);
 		void 			displayStats() const;
 
 	private:
