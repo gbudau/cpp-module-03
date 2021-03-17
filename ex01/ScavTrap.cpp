@@ -112,8 +112,8 @@ void		ScavTrap::beRepaired(unsigned int amount) {
 void		ScavTrap::challengeNewcomer(std::string const & target) {
 	int random_challenge = rand() %
 		(sizeof(scavtrap_challenges) / sizeof(scavtrap_challenges[0]));
-	std::cout << "SC4V-TP " << this->_name << ": So, ummm, " << target <<
-		". I have a new challenge for you. It's called \"" <<
+	std::cout << "SC4V-TP " << this->_name << ": Hey, " << target <<
+		". A new challenge is available. It's called \"" <<
 		scavtrap_challenges[random_challenge] << "\"\n";
 }
 
