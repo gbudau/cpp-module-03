@@ -53,13 +53,13 @@ ScavTrap &	ScavTrap::operator=(ScavTrap const & rhs) {
 		this->_ranged_attack_damage = rhs._ranged_attack_damage;
 		this->_armor_damage_reduction = rhs._armor_damage_reduction;
 	}
-	this->_print_quote("Hey everybody! Check out my package!");
+	this->_print_quote("Recompiling my combat code!");
 	return *this;
 }
 
 void		ScavTrap::rangedAttack(std::string const & target) const {
 	this->_print_quote("Get off my lawn!");
-	std::cout << "FR4G-TP " << this->_name <<
+	std::cout << "SC4V-TP " << this->_name <<
 		" attacks " << target <<
 		" at range, causing " << this->_ranged_attack_damage <<
 		" points of damage!\n";
@@ -67,7 +67,7 @@ void		ScavTrap::rangedAttack(std::string const & target) const {
 
 void		ScavTrap::meleeAttack(std::string const & target) const {
 	this->_print_quote("This is why you do your homework!");
-	std::cout << "FR4G-TP " << this->_name <<
+	std::cout << "SC4V-TP " << this->_name <<
 		" attacks " << target <<
 		" at close range, causing " << this->_melee_attack_damage <<
 		" points of damage!\n";
@@ -87,7 +87,7 @@ void		ScavTrap::takeDamage(unsigned int amount) {
 		if (this->_hit_points == 0) {
 			this->_print_quote("I'll die the way I lived: annoying!");
 		} else {
-			this->_print_quote("Ow! Hoo! Hey!");
+			this->_print_quote("Why do I even feel pain?!");
 		}
 	}
 	this->_print_info();
@@ -95,7 +95,7 @@ void		ScavTrap::takeDamage(unsigned int amount) {
 
 void		ScavTrap::beRepaired(unsigned int amount) {
 	if (this->_hit_points == 0 && amount != 0) {
-		this->_print_quote("Holy crap, that worked?");
+		this->_print_quote("Wow, that actually worked?");
 	}
 	if (amount + this->_hit_points > this->_max_hit_points) {
 		amount = this->_max_hit_points - this->_hit_points;
