@@ -1,5 +1,3 @@
-#include <ctime>
-#include <cstdlib>
 #include "FragTrap.hpp"
 
 int	main() {
@@ -7,7 +5,6 @@ int	main() {
 	FragTrap	rambo("R4MB0");
 	FragTrap	custom_tp(bar_bot);
 
-	srand(time(NULL));
 	custom_tp = rambo;
 
 	std::cout << "\n";
