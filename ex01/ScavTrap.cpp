@@ -75,9 +75,9 @@ void		ScavTrap::meleeAttack(std::string const & target) const {
 
 void		ScavTrap::takeDamage(unsigned int amount) {
 	if (this->_hit_points == 0) {
-		this->_print_quote("Um, where am I -- Are you god? Am I dead?");
+		this->_print_quote("I'M DEAD I'M DEAD OHMYGOD I'M DEAD!");
 	} else if (amount <= this->_armor_damage_reduction) {
-		this->_print_quote("Ha! Keep 'em coming!");
+		this->_print_quote("Can't touch this!");
 	} else {
 		unsigned int damage_taken = amount - this->_armor_damage_reduction;
 		if (this->_hit_points <= damage_taken) {
@@ -85,9 +85,10 @@ void		ScavTrap::takeDamage(unsigned int amount) {
 		}
 		this->_hit_points -= damage_taken;
 		if (this->_hit_points == 0) {
-			this->_print_quote("I'll die the way I lived: annoying!");
+			this->_print_quote("Oh my God, I'm leaking! I think I'm leaking!"
+					" Ahhhh, I'm leaking! There's oil everywhere!");
 		} else {
-			this->_print_quote("Why do I even feel pain?!");
+			this->_print_quote("Ow hohoho, that hurts! Yipes!");
 		}
 	}
 	this->_print_info();
@@ -95,7 +96,8 @@ void		ScavTrap::takeDamage(unsigned int amount) {
 
 void		ScavTrap::beRepaired(unsigned int amount) {
 	if (this->_hit_points == 0 && amount != 0) {
-		this->_print_quote("Wow, that actually worked?");
+		this->_print_quote("O-KAY! Thanks for giving me a second chance, God."
+				" I really appreciate it.");
 	}
 	if (amount + this->_hit_points > this->_max_hit_points) {
 		amount = this->_max_hit_points - this->_hit_points;
@@ -104,7 +106,7 @@ void		ScavTrap::beRepaired(unsigned int amount) {
 		this->_hit_points += amount;
 	}
 	if (this->_hit_points != 0) {
-		this->_print_quote("Sweet life juice!");
+		this->_print_quote("Good as new, I think. Am I leaking?");
 	}
 	this->_print_info();
 }
