@@ -7,7 +7,6 @@ int	main() {
 	ScavTrap	scooter("SC00T3R");
 	ScavTrap	custom_tp(vronica);
 
-	srand(time(NULL));
 	custom_tp = scooter;
 
 	std::cout << "\n";

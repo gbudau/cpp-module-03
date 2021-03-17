@@ -36,6 +36,12 @@ FragTrap::FragTrap(std::string const & name)
 	: _name(name), _hit_points(100), _max_hit_points(100), _energy_points(100),
 	_max_energy_points(100), _level(1), _melee_attack_damage(30),
 	_ranged_attack_damage(20), _armor_damage_reduction(5) {
+	static bool	seeded = false;
+
+	if (!seeded) {
+		srand(time(NULL));
+		seeded = true;
+	}
 	this->_print_quote("Let's get this party started!");
 	return;
 }
@@ -50,6 +56,12 @@ FragTrap::~FragTrap() {
 }
 
 FragTrap &	FragTrap::operator=(FragTrap const & rhs) {
+	static bool	seeded = false;
+
+	if (!seeded) {
+		srand(time(NULL));
+		seeded = true;
+	}
 	if (this != &rhs) {
 		this->_name = rhs._name;
 		this->_hit_points = rhs._hit_points;

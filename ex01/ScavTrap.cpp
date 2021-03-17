@@ -16,6 +16,12 @@ ScavTrap::ScavTrap(std::string const & name)
 	: _name(name), _hit_points(100), _max_hit_points(100), _energy_points(50),
 	_max_energy_points(50), _level(1), _melee_attack_damage(20),
 	_ranged_attack_damage(15), _armor_damage_reduction(3) {
+	static bool	seeded = false;
+
+	if (!seeded) {
+		srand(time(NULL));
+		seeded = true;
+	}
 	this->_print_quote("Here I come to save the day!");
 	return;
 }
@@ -30,6 +36,12 @@ ScavTrap::~ScavTrap() {
 }
 
 ScavTrap &	ScavTrap::operator=(ScavTrap const & rhs) {
+	static bool	seeded = false;
+
+	if (!seeded) {
+		srand(time(NULL));
+		seeded = true;
+	}
 	if (this != &rhs) {
 		this->_name = rhs._name;
 		this->_hit_points = rhs._hit_points;
