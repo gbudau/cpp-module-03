@@ -15,7 +15,7 @@ class FragTrap {
 		void			meleeAttack(std::string const & target) const;
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
-		void			vaglthunter_dot_exe(std::string const & target);
+		void			vaulthunter_dot_exe(std::string const & target);
 
 	private:
 		std::string		_name;
