@@ -12,14 +12,22 @@ static const std::string	scavtrap_challenges[] = {
 	"Hack The Planet!",
 };
 
-ScavTrap::ScavTrap(std::string const & name)
-	: ClapTrap("SC4V-TP", name, 100, 100, 50, 50, 1, 20, 15, 3) {
+ScavTrap::ScavTrap(std::string const & name) : ClapTrap(name) {
 	static bool	seeded = false;
 
 	if (!seeded) {
 		srand(time(NULL));
 		seeded = true;
 	}
+	this->setType("SC4V-TP");
+	this->setHitPoints(100);
+	this->setMaxHitPoints(100);
+	this->setEnergyPoints(50);
+	this->setMaxEnergyPoints(50);
+	this->setLevel(1);
+	this->setMeleeAttackDamage(20);
+	this->setRangedAttackDamage(15);
+	this->setArmorDamageReduction(3);
 	this->_print_quote("Here I come to save the day!");
 	return;
 }

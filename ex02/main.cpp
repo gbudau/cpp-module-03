@@ -76,20 +76,19 @@ int	main() {
 	}
 	std::cout << "\n########## ClapTrap class tests ##########\n\n";
 	{
-		ClapTrap	fragtrap("FR4G-TP",
-				"fragtrap", 100, 100, 100, 100, 1, 30, 20, 5);
-		ClapTrap	scavtrap("SC4V-TP", "scavtrap", 100, 100, 50, 50, 1, 20, 15, 3);
-		ClapTrap	shapeshift(fragtrap);
+		ClapTrap	rt_fc("RT-FC");
+		ClapTrap	nine_thousand("CLAP-9000");
+		ClapTrap	custom_tp(rt_fc);
 
 
-		fragtrap.takeDamage(123);
-		fragtrap.beRepaired(20);
-		scavtrap.takeDamage(123);
-		scavtrap.beRepaired(20);
-		shapeshift.takeDamage(123);
-		shapeshift.beRepaired(20);
-		shapeshift = scavtrap;
-		shapeshift.takeDamage(123);
-		shapeshift.beRepaired(20);
+		rt_fc.takeDamage(123);
+		rt_fc.beRepaired(20);
+		nine_thousand.takeDamage(123);
+		nine_thousand.beRepaired(20);
+		custom_tp.takeDamage(123);
+		custom_tp.beRepaired(20);
+		custom_tp = nine_thousand;
+		custom_tp.takeDamage(123);
+		custom_tp.beRepaired(20);
 	}
 }

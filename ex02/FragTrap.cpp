@@ -32,14 +32,22 @@ static const std::string	vault_hunter_quotes[] = {
 	"It's like a box of chocolates..."
 };
 
-FragTrap::FragTrap(std::string const & name)
-	: ClapTrap("FR4G-TP", name, 100, 100, 100, 100, 1, 30, 20, 5) {
+FragTrap::FragTrap(std::string const & name) : ClapTrap(name) {
 	static bool	seeded = false;
 
 	if (!seeded) {
 		srand(time(NULL));
 		seeded = true;
 	}
+	this->setType("FR4G-TP");
+	this->setHitPoints(100);
+	this->setMaxHitPoints(100);
+	this->setEnergyPoints(100);
+	this->setMaxEnergyPoints(100);
+	this->setLevel(1);
+	this->setMeleeAttackDamage(30);
+	this->setRangedAttackDamage(20);
+	this->setArmorDamageReduction(5);
 	this->_print_quote("Let's get this party started!");
 	return;
 }
