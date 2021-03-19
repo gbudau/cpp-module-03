@@ -69,9 +69,9 @@ void		NinjaTrap::ninjaShoebox(FragTrap const & fragtrap) {
 	std::cout << this->getType() << " " << this->getName() <<
 		": Tell me your favorite joke, " << fragtrap.getType() << "\n";
 	std::cout << fragtrap.getType() << " " << fragtrap.getName() <<
-		": This is a zebra before defragmentation -> \"| | | | | | | |\"\n" <<
+		": What do a big bar of chocolate and a frag grenade have in common?\n" <<
 		fragtrap.getType() << " " << fragtrap.getName() <<
-		": This is a zebra after defragmentation -> \"||||||||       \"\n";
+		": Everybody gets a piece\n";
 }
 
 void		NinjaTrap::ninjaShoebox(ScavTrap const & scavtrap) {
@@ -87,7 +87,7 @@ void		NinjaTrap::ninjaShoebox(NinjaTrap const & ninjatrap) {
 	std::cout << this->getType() << " " << this->getName() <<
 		": Tell me your favorite joke, " << ninjatrap.getType() << "\n";
 	std::cout << ninjatrap.getType() << " " << ninjatrap.getName() <<
-		": Can a ninja throw a star?\n" <<
+		": What kind of shoes does ninja wear?\n" <<
 		ninjatrap.getType() << " " << ninjatrap.getName() <<
-		": SHURE-HE-CAN!\n";
+		": Sneakers!\n";
 }
