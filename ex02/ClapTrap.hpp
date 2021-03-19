@@ -11,8 +11,6 @@ class ClapTrap {
 	ClapTrap &			operator=(ClapTrap const & rhs);
 	void				takeDamage(unsigned int amount);
 	void				beRepaired(unsigned int amount);
-
- protected:
 	std::string const &	getType() const;
 	std::string const &	getName() const;
 	unsigned int		getHitPoints() const;
@@ -23,6 +21,8 @@ class ClapTrap {
 	unsigned int		getMeleeAttackDamage() const;
 	unsigned int		getRangedAttackDamage() const;
 	unsigned int		getArmorDamageReduction() const;
+
+ protected:
 	void				setType(std::string const & type);
 	void				setName(std::string const & name);
 	void				setHitPoints(unsigned int hit_points);
