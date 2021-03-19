@@ -79,36 +79,34 @@ int	main() {
 
 	std::cout << "\n\n########## ClapTrap class tests ##########\n\n";
 	{
-		ClapTrap	fragtrap("FR4G-TP",
-				"R4MB0", 100, 100, 100, 100, 1, 30, 20, 5);
-		ClapTrap	scavtrap("SC4V-TP", "VR-0N1CA", 100, 100, 50, 50, 1, 20, 15, 3);
-		ClapTrap	shapeshift(fragtrap);
+		ClapTrap	rt_fc("RT-FC");
+		ClapTrap	nine_thousand("CLAP-9000");
+		ClapTrap	custom_tp(rt_fc);
 
 
 		std::cout << "\n";
-		fragtrap.takeDamage(123);
+		rt_fc.takeDamage(123);
 		std::cout << "\n";
-		fragtrap.beRepaired(20);
+		rt_fc.beRepaired(20);
 		std::cout << "\n";
-		scavtrap.takeDamage(123);
+		nine_thousand.takeDamage(123);
 		std::cout << "\n";
-		scavtrap.beRepaired(20);
+		nine_thousand.beRepaired(20);
 		std::cout << "\n";
-		shapeshift.takeDamage(123);
+		custom_tp.takeDamage(123);
 		std::cout << "\n";
-		shapeshift.beRepaired(20);
+		custom_tp.beRepaired(20);
 		std::cout << "\n";
-		shapeshift = scavtrap;
+		custom_tp = nine_thousand;
 		std::cout << "\n";
-		shapeshift.takeDamage(123);
+		custom_tp.takeDamage(123);
 		std::cout << "\n";
-		shapeshift.beRepaired(20);
+		custom_tp.beRepaired(20);
 		std::cout << "\n";
 	}
 	std::cout << "\n\n########## NinjaTrap class tests ##########\n\n";
 	{
-		ClapTrap	custom("CL4P-TP",
-				"CU5TM-TP", 100, 100, 100, 100, 100, 100, 100, 100);
+		ClapTrap	custom("CU5TM-TP");
 		FragTrap	rambo("R4MB0");
 		ScavTrap	vronica("VR-0N1CA");
 

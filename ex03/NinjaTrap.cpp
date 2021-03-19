@@ -1,7 +1,15 @@
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap(std::string const & name)
-	: ClapTrap("N1NJ4-TP", name, 60, 60, 120, 120, 1, 60, 5, 0) {
+NinjaTrap::NinjaTrap(std::string const & name) : ClapTrap(name) {
+	this->setType("FR4G-TP");
+	this->setHitPoints(60);
+	this->setMaxHitPoints(60);
+	this->setEnergyPoints(120);
+	this->setMaxEnergyPoints(120);
+	this->setLevel(1);
+	this->setMeleeAttackDamage(60);
+	this->setRangedAttackDamage(5);
+	this->setArmorDamageReduction(0);
 	this->_print_quote("I'm a robot ninja...");
 	return;
 }

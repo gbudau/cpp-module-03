@@ -1,17 +1,10 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string const & type,
-		std::string const & name, unsigned int hit_points,
-		unsigned int max_hit_points, unsigned int energy_points,
-		unsigned int max_energy_points, unsigned int level,
-		unsigned int melee_attack_damage, unsigned int ranged_attack_damage,
-		unsigned int armor_damage_reduction)
-	: _type(type), _name(name), _hit_points(hit_points),
-	_max_hit_points(max_hit_points), _energy_points(energy_points),
-	_max_energy_points(max_energy_points), _level(level),
-	_melee_attack_damage(melee_attack_damage),
-	_ranged_attack_damage(ranged_attack_damage),
-	_armor_damage_reduction(armor_damage_reduction) {
+ClapTrap::ClapTrap(std::string const & name)
+	: _type("CL4P-TP"), _name(name), _hit_points(100), _max_hit_points(100),
+	_energy_points(100), _max_energy_points(100),
+	_level(1), _melee_attack_damage(100), _ranged_attack_damage(100),
+	_armor_damage_reduction(100) {
 	this->_print_quote("Booting sequence complete. Hello!"
 			" C to the L to the 4 to the P to the WHAAT!");
 	return;
