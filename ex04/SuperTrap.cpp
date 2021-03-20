@@ -48,5 +48,5 @@ void		SuperTrap::rangedAttack(std::string const & target) const {
 }
 
 void		SuperTrap::meleeAttack(std::string const & target) const {
-	NinjaTrap::rangedAttack(target);
+	NinjaTrap::meleeAttack(target);
 }
