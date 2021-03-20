@@ -15,6 +15,7 @@ ClapTrap::ClapTrap(ClapTrap const & src) {
 }
 
 ClapTrap::~ClapTrap() {
+	this->_type = "CL4P-TP";
 	this->_print_quote("Roses are red and/Violets are blue/Wait... "
 			"how many syllables was that?"
 			" ClapTrap OUT!");
