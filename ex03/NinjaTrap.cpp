@@ -1,7 +1,7 @@
 #include "NinjaTrap.hpp"
 
 NinjaTrap::NinjaTrap(std::string const & name) : ClapTrap(name) {
-	this->setType("FR4G-TP");
+	this->setType("N1NJ4-TP");
 	this->setHitPoints(60);
 	this->setMaxHitPoints(60);
 	this->setEnergyPoints(120);
